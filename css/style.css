@@ -1,0 +1,150 @@
+/* Apply a soft, romantic background */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  background: linear-gradient(135deg, #fff0f6, #ffe3e3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+/* Header styling */
+header {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 50px;
+  color: #880e4f;
+}
+
+/* Button container */
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Main buttons */
+.main-button {
+  padding: 20px 40px;
+  background-color: #f48fb1;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect */
+.main-button:hover {
+  background-color: #ec407a;
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.adventure-container {
+  max-width: 600px;
+  margin: auto;
+}
+
+#scene-img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.choice-btn {
+  padding: 15px 30px;
+  margin: 10px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.choice-btn:hover {
+  transform: scale(1.05);
+}
+
+
+
+
+
+#next-btn {
+  background-color: #FF69B4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#next-btn:hover {
+  background-color: #FF1493;
+}
+#restart-btn {
+  background-color: #8d53d4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#restart-btn:hover {
+  background-color: #310666;
+}
+.whyiloveyoucontainer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: white;
+  padding: 20px 40px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  width: 600px;
+  max-width: 90vw;
+}
+
+.arrow-btn {
+  cursor: pointer;
+  font-size: 2rem;
+  user-select: none;
+  background: none;
+  border: none;
+  color: #333;
+  padding: 0 10px;
+  transition: color 0.2s ease;
+}
+
+.arrow-btn:disabled {
+  color: #aaa;
+  cursor: default;
+}
+
+.message-box {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 1.2rem;
+  min-height: 3rem;
+  user-select: none;
+}
+#spotify-player {
+  border-radius: 12px;  /* or override here */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  /* add more styles you want */
+}
+#spotify-player-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
