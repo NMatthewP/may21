@@ -1,7 +1,7 @@
 const scenes = [
   // 0: Intro - Stay Home or Fancy Restaurant
   {
-    img: 'https://nmatthewp.github.io/may21/images/adventure/scene_1.jpg',
+    img: 'images/adventure/scene_1.jpg',
     text: "Two years later, we’re finally going out! Do we stay home and order takeout or go to a fancy restaurant?",
     choices: [
       { label: "Stay Home (Takeout)", next: 1 },
