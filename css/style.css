@@ -1,30 +1,82 @@
 /* Apply a soft, romantic background */
-body {
+body.adventure-page {
   margin: 0;
   padding: 0;
-  font-family: 'Lato', sans-serif;
-  background: linear-gradient(135deg, #fff0f6, #ffe3e3);
+  font-family: "VT323", monospace;
+  font-size: 20px;
+  font-weight: 400;
+  font-style: normal;
+
+  background-image: url("../assets/background-adventure.gif"); /* adjust path if needed */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   text-align: center;
+  color: white; /* to ensure text is readable */
+  cursor: url("../images/pixel-cursor.png"), auto;
+
+}
+
+body.love-page {
+  margin: 0;
+  padding: 0;
+  font-family: "VT323", monospace;
+  font-size: 20px;
+  font-weight: 400;
+  font-style: normal;
+
+  background-image: url("../assets/background-love.gif"); /* adjust path if needed */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  color: white; /* to ensure text is readable */
+  cursor: url("../images/pixel-cursor.png"), auto;
+
+}
+
+/* Optional: dark overlay for readability */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4); /* darken background slightly */
+  z-index: -1;
 }
 
 /* Header styling */
 header {
+  font-family: "Pixelify Sans", sans-serif;
   font-size: 2.5rem;
-  font-weight: bold;
+  font-optical-sizing: auto;
+  font-weight: 400; 
   margin-bottom: 50px;
   color: #880e4f;
 }
+
 
 /* Button container */
 .button-container {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  background-image: url("../assets/main-.gif");
 }
 
 /* Main buttons */
@@ -32,6 +84,11 @@ header {
   padding: 20px 40px;
   background-color: #f48fb1;
   color: white;
+  border: none;
+  cursor: pointer;
+  font-family: "Pixelify Sans", sans-serif;
+  font-weight: 700;
+  text-align: center;
   text-decoration: none;
   border-radius: 30px;
   font-size: 1.2rem;
@@ -58,22 +115,26 @@ header {
 }
 
 .choice-btn {
-  padding: 15px 30px;
-  margin: 10px;
-  border: none;
-  border-radius: 25px;
-  font-size: 1rem;
+  font-family: 'Press Start 2P', cursive; /* Pixel font */
+  background-color: #fce94f;
+  margin: 0 10px;
+  padding: 12px 24px;
+  color: #660b5b;
+  padding: 10px 20px;
   cursor: pointer;
-  transition: transform 0.2s;
+  image-rendering: pixelated; /* helps if you're using pixel background image */
+  font-size: 12px;
+  border-radius: 20; /* sharp edges */
+  text-transform: uppercase;
 }
+
 
 .choice-btn:hover {
   transform: scale(1.05);
 }
-
-
-
-
+.choice-btn:active {
+  transform: scale(0.95);
+}
 
 #next-btn {
   background-color: #FF69B4;
@@ -81,7 +142,7 @@ header {
   border: none;
   padding: 10px 20px;
   font-size: 1.2rem;
-  border-radius: 5px;
+  border-radius: 1px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -90,15 +151,20 @@ header {
   background-color: #FF1493;
 }
 #restart-btn {
-  background-color: #8d53d4;
-  color: white;
-  border: none;
+  font-family: 'Press Start 2P', cursive; /* Pixel font */
+  background-color: #75107e;
+  
+  color: #d1d4ba;
+  border: 3px solid #555;
   padding: 10px 20px;
-  font-size: 1.2rem;
-  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  image-rendering: pixelated; /* helps if you're using pixel background image */
+  font-size: 12px;
+  box-shadow: 0 4px #999;
+  border-radius: 0; /* sharp edges */
+  text-transform: uppercase;
 }
+
 #restart-btn:hover {
   background-color: #310666;
 }
@@ -106,7 +172,7 @@ header {
   display: flex;
   align-items: center;
   gap: 20px;
-  background: white;
+  background: rgb(202, 211, 158);
   padding: 20px 40px;
   border-radius: 12px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -115,15 +181,25 @@ header {
 }
 
 .arrow-btn {
-  cursor: pointer;
-  font-size: 2rem;
-  user-select: none;
-  background: none;
+  width: 40px;
+  height: 40px;
   border: none;
-  color: #333;
-  padding: 0 10px;
-  transition: color 0.2s ease;
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  font-size: 0; /* hides the fallback arrow */
 }
+
+#left-btn {
+  background-image: url("../assets/arrow_left.png");
+}
+
+#right-btn {
+  background-image: url("../assets/arrow_right.png");
+}
+
 
 .arrow-btn:disabled {
   color: #aaa;
@@ -133,9 +209,22 @@ header {
 .message-box {
   flex-grow: 1;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   min-height: 3rem;
   user-select: none;
+
+  /* New style additions */
+  background-color: #fae474; /* soft background */
+  color: #0f0e0e; /* dark text for contrast */
+  padding: 15px 20px;
+  border-radius: 12px;
+  border: 2px solid #e98db5; /* match your palette */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+}
+.message-box:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 #spotify-player {
   border-radius: 12px;  /* or override here */
@@ -148,3 +237,4 @@ header {
   align-items: center;
   margin-top: 20px;
 }
+

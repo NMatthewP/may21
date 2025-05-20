@@ -1,27 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Play Our Adventure</title>
   <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
-  <header>🎮 Our Adventure</header>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Nanum+Pen+Script&family=Pixelify+Sans:wght@400..700&family=Shadows+Into+Light&family=VT323&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Nanum+Pen+Script&family=Pixelify+Sans:wght@400..700&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"></head>
+<body class = "adventure-page">
+   <div class="wrapper"> 
+  <header></header>
 
   <main class="adventure-container">
-    <!-- Scene content will be injected here -->
     <div id="scene">
-      <img id="scene-img" src="./images/scene1.jpg" alt="Scene 1">
-      <p id="scene-text">It’s our first date night. Should we go for sushi 🍣 or burgers 🍔?</p>
+      <img id="scene-img" src="images/adventure/.scene_1"  />
+      <p id="scene-text">Loading adventure...</p>
     </div>
 
     <div class="choices">
-      <button id="choice1" class="choice-btn">Sushi 🍣</button>
-      <button id="choice2" class="choice-btn">Burgers 🍔</button>
+      <button id="choice1" class="choice-btn">Choice 1</button>
+      <button id="choice2" class="choice-btn">Choice 2</button>
     </div>
+
     <button id="restart-btn" class="restart-btn">Restart</button>
   </main>
 
-  <script src="./js/adventure.js"></script>
+  <script src="js/adventure.js"></script>
+  <audio id="click-sound" src="audio/click.mp3" preload="auto"></audio>
+ </div>
 </body>
 </html>
